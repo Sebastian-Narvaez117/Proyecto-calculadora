@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación - Hotel Chevere</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="reservacion">
+    <header>
+        <h1 class="titulo-reservacion">Reservación en el Hotel Chevere</h1>
+        <p class="subtitulo">Complete el siguiente formulario para reservar su habitación y seleccionar los servicios deseados.</p>
+    </header>
+    <div class="container reservacion">
+        <form action="submit_reservation_form" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="habitacion">Tipo de Habitación:</label>
+            <select id="habitacion" name="habitacion">
+                <option value="estandar">Habitación Estándar - $100 por noche</option>
+                <option value="suite">Suite de Lujo - $200 por noche</option>
+                <option value="familiar">Habitación Familiar - $150 por noche</option>
+            </select>
+
+            <label for="servicios">Servicios Adicionales:</label>
+            <select id="servicios" name="servicios[]" multiple>
+                <option value="limpieza">Servicio de Limpieza</option>
+                <option value="bar">Bar</option>
+                <option value="taxi">Servicio de Taxi</option>
+                <option value="comidas">Comidas</option>
+                <option value="internet">Internet</option>
+                <option value="tv">TV</option>
+                <option value="piscina">Piscina</option>
+                <option value="estacionamiento">Estacionamiento</option>
+                <option value="masaje">Masaje</option>
+            </select>
+
+            <input type="submit" value="Reservar">
+        </form>
+    </div>
+    <footer>
+        <p class="footer-text">&copy; 2024 Hotel Chevere. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura de Reserva - Hotel Chevere</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Factura de Reserva - Hotel Chevere</h1>
+        <div class="detalle-reserva">
+            <h2 class="titulo-detalle">Detalles de la Reserva</h2>
+            <p class="detalle"><strong>Fecha de entrada:</strong> {{ factura.reserva.fecha_entrada }}</p>
+            <p class="detalle"><strong>Fecha de salida:</strong> {{ factura.reserva.fecha_salida }}</p>
+            <p class="detalle"><strong>Tipo de habitación:</strong> {{ factura.reserva.tipo_habitacion }}</p>
+
+        </div>
+        <div class="detalle-reserva">
+            <h2 class="titulo-detalle">Precio Total</h2>
+            <p class="precio-total">$ {{ factura.precio_total }}</p>
+        </div>
+        <!-- Otros detalles de la factura, como información de contacto, política de cancelación, etc. -->
+    </div>
+</body>
+</html>

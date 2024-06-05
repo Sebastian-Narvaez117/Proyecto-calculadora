@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Habitaciones - Hotel Chevere</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="tipos-habitaciones">
+    <header>
+        <h1 class="titulo-tipos-habitaciones">Tipos de Habitaciones del Hotel Chevere</h1>
+        <p class="subtitulo">Descubre nuestros diferentes tipos de habitaciones para una estancia cómoda y placentera</p>
+    </header>
+    <a href="pagina_inicio.html" class="btn-regresar">Volver al Inicio</a>
+    <div class="container tipos-habitaciones">
+        <div class="habitacion">
+            <h2 class="nombre-habitacion">Habitación Estándar</h2>
+            <p class="descripcion-habitacion">Disfruta de la comodidad y elegancia de nuestras habitaciones estándar, perfectas para viajeros individuales o parejas.</p>
+            <p class="precio-habitacion">Precio por noche: $100</p>
+        </div>
+        <div class="habitacion">
+            <h2 class="nombre-habitacion">Suite de Lujo</h2>
+            <p class="descripcion-habitacion">Sumérgete en el lujo y el confort con nuestra suite de lujo, equipada con todas las comodidades modernas y vistas espectaculares.</p>
+            <p class="precio-habitacion">Precio por noche: $200</p>
+        </div>
+        <div class="habitacion">
+            <h2 class="nombre-habitacion">Habitación Familiar</h2>
+            <p class="descripcion-habitacion">Espacio y comodidad para toda la familia en nuestras habitaciones familiares, diseñadas para brindar una experiencia memorable para todos.</p>
+            <p class="precio-habitacion">Precio por noche: $150</p>
+        </div>
+        <!-- Agrega más tipos de habitaciones según sea necesario -->
+    </div>
+    <footer>
+        <p class="footer-text">&copy; 2024 Hotel Chevere. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

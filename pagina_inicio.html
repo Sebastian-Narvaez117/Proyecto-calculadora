@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Chevere</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al Hotel Chevere</h1>
+        <p>¡Tu destino perfecto para unas vacaciones inolvidables!</p>
+        <div class="enlaces">
+            <a href="{% url 'ver_servicios' %}" class="btn">Ver Servicios</a>
+            <a href="{% url 'ver_tipos_habitaciones' %}" class="btn">Ver Tipos de Habitaciones</a>
+        </div>
+    </div>
+    <div class="top-right-btns">
+        <a href="{% url 'reserva_habitacion' %}" class="btn">Reservar Habitación</a>
+        <a href="{% url 'registrar_cliente' %}" class="btn">Registrarse como Cliente</a>
+    </div>
+    <footer>
+        <p>&copy; {% now "Y" %} Hotel Chevere. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
